@@ -18,7 +18,7 @@ local_version="-4k-cdh"
 # 复用判据只认这个串 + kernelrelease（见下方 SHA256SUMS 分支），不含 git HEAD：
 # 内核源码/生成头（如 fs/cdh_vendor_rules.h）改动后必须同步把版本号 +1，否则会
 # 静默复用旧 Image（v5 = 重定向表加 /vendor/bin/dlkm_loader_mainline）。
-build_recipe="lineage-23-gki-virtio-wifi-cdh-modules-v10"
+build_recipe="lineage-23-gki-virtio-wifi-cdh-modules-v14"
 jobs="${CDH_KERNEL_JOBS:-$(sysctl -n hw.ncpu 2>/dev/null || getconf _NPROCESSORS_ONLN 2>/dev/null || printf '4')}"
 volume="cdh-16-kernel-$$_${RANDOM}"
 publish_candidate=""
